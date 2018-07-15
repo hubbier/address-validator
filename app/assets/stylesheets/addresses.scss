@@ -1,0 +1,101 @@
+// Place all the styles related to the addresses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    font-size: 18px;
+}
+h1 {
+    font-size: 2.2em;
+}
+label {
+    display: block;
+    margin-bottom: 6px;
+    margin-left: 2px;
+}
+input {
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid #666;
+}
+input:focus {    
+    outline: none;
+    box-shadow: 0px 0px 2px blue;
+}
+input[type="text"] {
+    padding: 5px 10px;
+    font-size: 1em;
+}
+.content {
+    width: 400px;
+    margin: auto;
+}
+.form-row {
+    margin-bottom: 20px;
+    > div {
+        float: left;
+    }
+}
+.form-row:before, .form-row:after {
+    content: " ";
+    display: table;
+}
+.form-row:after {
+    clear: both;
+}
+#address_street_address, #address_city, #address_state, #address_zip_code {
+    width: 100%;
+}
+#city_div {
+    width: 200px;
+}
+#state_div, #zip_code_div {
+    width: 85px;
+    margin-left: 15px;
+}
+.buttons {
+    margin-top: 35px;
+    > input {
+        width: 100%;
+        color: white;
+        background-color: #666;
+        font-weight: bold;
+        font-size: 1.1em;
+        cursor: pointer;
+    }
+}
+#notifications {
+    font-size: 0.8em;
+    color: red;
+    font-weight: bold;
+}
+#success_message {
+    display: none;
+    color: white;
+    font-weight: bold;
+    background-color: green;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+// <ClientSideValidations>
+.message {
+    font-size: 0.7em;
+    color: white;
+    background-color: red;
+    border-radius: 0 0 5px 5px;
+    padding: 2px 5px;
+    margin: 0 5px;
+}
+
+div.field_with_errors {
+    width: 100%;
+    input {
+        border-color: red;
+    }
+}
+// </ClientSideValidations>

@@ -1,0 +1,34 @@
+<div class="content">
+  <h1>Address Validator</h1>
+  <%= form_for @address, method: :post, validate: true do |f| %>
+      
+      <div class="form-row">
+        <%= f.label :street_address %>
+        <%= f.text_field :street_address, name: :street_address %>
+      </div>
+      
+      <div class="form-row">
+        <div id="city_div">
+          <%= f.label :city %>
+          <%= f.text_field :city, name: :city %>
+        </div>
+
+        <div id="state_div">
+          <%= f.label :state %>
+          <%= f.text_field :state, name: :state %>
+        </div>
+
+        <div id="zip_code_div">
+          <%= f.label :zip_code %>
+          <%= f.text_field :zip_code, name: :zip_code %>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <%= f.submit 'Validate Address', id: "validate_address", "data-gis-url": Address::GIS_URL %>
+      </div>
+
+  <% end %>
+  <ul id="notifications"></ul>
+  <p id="success_message"></p>
+</div>
